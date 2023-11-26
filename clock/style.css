@@ -113,6 +113,8 @@ body {
 
 .day-name,
 .day-number,
-.yaer {
-  margin-left: 8px;
+.yaer,
+.month-name {
+  margin-left: 10px;
 }
+
