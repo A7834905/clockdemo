@@ -49,14 +49,15 @@ li::before {
 }
 
 .imgbig {
-  height: 45vh;
+  object-fit: cover;
+  height: 60%;
 }
 
 .sign {
   background-color: white;
   position: absolute;
   z-index: 1;
-  transform: translate(250px, -100px);
+
   opacity: 0.7;
   border-radius: 10px;
   width: 75px;
@@ -66,8 +67,67 @@ li::before {
   justify-content: center;
   text-align: center;
   top: 50%;
-  left: 80%;
-  transform: translate(-50%, -50%);
+  left: 70%;
+}
+
+@media (max-width: 1400px) {
+  .sign {
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0.7;
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 40%;
+    left: 60%;
+    /* 在屏幕宽度小于等于1400px时的样式 */
+  }
+}
+
+@media (max-width: 1200px) {
+  .sign {
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0.7;
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 35%;
+    left: 60%;
+    /* 在屏幕宽度小于等于1200px时的样式 */
+  }
+}
+
+@media (max-width: 990px) {
+  .sign {
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+
+    opacity: 0.7;
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    top: 45%;
+    left: 45%;
+    /* 在屏幕宽度小于等于990px时的样式 */
+  }
 }
 
 .card {
