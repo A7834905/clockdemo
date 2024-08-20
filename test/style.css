@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+select {
+  width: 100px;
+  border-radius: 3px;
+  background: #3c3c40;
+  color: #fafafa;
+}
+
+option {
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around; /* 让logo和工具栏在两端 */
+  align-items: center; /* 让它们在垂直方向上居中 */
+  height: 46px; /* 根据需要调整 */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+
+  position: relative; /* 改为relative定位 */
+  width: 100%; /* 宽度设为100% */
+  max-width: 1920px; /* 设置最大宽度 */
+  min-width: 1200px; /* 设置最小宽度 */
+}
+
+.logo {
+  transform: translateY(20px) translateX(40px); /* 使用transform进行微调 */
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  padding-right: 20px;
+}
+
+.contant {
+  position: relative;
+  min-width: 1200px; /* 設定最小寬度 */
+  width: 100%;
+  height: 95vh; /* 設定高度為視窗高度 */
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  flex-direction: column; /* 使内容垂直排列 */
+}
+
+.ipt {
+  display: flex;
+  margin-top: 230px;
+}
+
+.button button {
+  width: 70px;
+  height: 50px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #f0c14b, #ff9900); /* 渐变背景 */
+  box-shadow: 0 5px #e0880a, 0 10px 20px rgba(0, 0, 0, 0.2); /* 阴影效果 */
+  color: #333; /* 文字颜色 */
+  font-size: 18px; /* 字体大小 */
+  font-weight: bold;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5); /* 文字阴影，增加立体感 */
+  cursor: pointer;
+  transition: all 0.3s ease; /* 添加平滑过渡效果 */
+  margin-left: 10px;
+}
+
+.button button:hover {
+  background: linear-gradient(to bottom, #ff9900, #f0c14b); /* 悬停时反转渐变 */
+  box-shadow: 0 5px #d47f06, 0 10px 20px rgba(0, 0, 0, 0.3); /* 调整阴影 */
+}
+
+.button button:active {
+  box-shadow: 0 3px #d47f06, 0 5px 10px rgba(0, 0, 0, 0.2); /* 按下时的阴影效果 */
+  transform: translateY(2px); /* 按下时按钮向下移动的效果 */
+}
+
+.ipt form {
+  display: flex;
+  flex-direction: column; /* 使输入框垂直排列 */
+  gap: 10px; /* 设置输入框之间的间距 */
+  align-items: center; /* 水平居中 */
+}
+
+.ipt input {
+  width: 130px; /* 设置输入框的宽度 */
+  height: 20px;
+  padding: 10px; /* 增加内边距 */
+  border: 1px solid black; /* 边框样式 */
+  border-radius: 3px;
+}
+
+.ipt input::placeholder {
+  color: black; /* 设置placeholder的颜色 */
+  opacity: 1; /* 设置不透明度 (1为完全不透明) */
+}
+
+.background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 使圖片置中 */
+  width: 100%;
+  max-width: 1920px; /* 設定最大寬度 */
+  height: 100%;
+  min-width: 1200px; /* 設定最小寬度 */
+  object-fit: cover; /* 讓圖片覆蓋整個區域 */
+  z-index: -2; /* 將圖片放在最底層 */
+}
+
+.car {
+  position: absolute;
+  top: 35%;
+  left: 51%;
+  transform: translate(-50%, -50%); /* 使圖片置中 */
+  z-index: -1;
+  width: 90%;
+
+  max-width: 900px; /* 设置图片的最大宽度 */
+
+  height: auto; /* 自动调整高度，保持比例 */
+}
+
+/* 页脚部分 */
+.footer {
+  position: relative; /* 改为relative定位 */
+  width: 100%; /* 宽度设为100% */
+  max-width: 1920px; /* 设置最大宽度 */
+  min-width: 1200px; /* 设置最小宽度 */
+  margin: 0 auto; /* 居中对齐 */
+  display: block; /* 使用block布局 */
+  text-align: center; /* 使页脚内容居中 */
+  z-index: -2; /* 将页脚放在背景下方 */
+}
+
+.footer img {
+  width: 100%;
+  height: 100%; /* 高度设置为100% */
+  object-fit: cover; /* 让图片覆盖整个区域 */
+  display: block; /* 保证图片是块级元素 */
+}
+
+.smallcar {
+  display: flex;
+  justify-content: center; /* 使小车群组居中 */
+  gap: 30px; /* 设置小车之间的间距 */
+  position: relative;
+  top: 70px; /* 使用 top 属性将小车群组下移 */
+}
+
+.smallcar img {
+  width: 250px; /* 根据需要调整每张小车图片的宽度 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+.smallcar img:hover {
+  transform: scale(1.1); /* 鼠标悬停时放大图片 */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* 增加阴影效果 */
+}
+
+.time {
+  font-family: "Arial", sans-serif; /* 替換為您想要的字體 */
+  font-size: 12px; /* 調整字體大小 */
+  font-weight: bold; /* 設置字體粗細 */
+  color: #949494; /* 設置字體顏色 */
+}
+
+.name {
+  position: absolute;
+  color: #fff;
+}
+.footer1 {
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-direction: column; /* 垂直排列子元素 */
+  align-items: center; /* 水平居中 */
+  justify-content: center; /* 垂直居中 */
+  width: 100%;
+}
