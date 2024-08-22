@@ -36,6 +36,7 @@ option {
 
 .logo {
   transform: translateY(20px) translateX(100px);
+  z-index: 1;
 }
 
 .logo img {
@@ -63,12 +64,18 @@ option {
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+
+  background-image: url("BG.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .ipt {
   display: flex;
   margin-top: 230px;
   margin-left: 50px;
+  z-index: 10;
 }
 
 .image-button {
@@ -86,7 +93,7 @@ option {
 }
 
 .image-button:hover {
-  opacity: 0.8; /* 悬停时使按钮稍微变暗 */
+  opacity: 0.8;
 }
 
 .image-button:active {
@@ -113,7 +120,7 @@ option {
   opacity: 1;
 }
 
-.background-image {
+/* .background-image {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -125,14 +132,14 @@ option {
 
   object-fit: cover;
   z-index: -2;
-}
+} */
 
 .car {
   position: absolute;
   top: 36%;
   left: 53%;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: 2;
   width: 90%;
 
   max-width: 900px;
